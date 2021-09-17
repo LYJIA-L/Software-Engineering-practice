@@ -1,12 +1,3 @@
-//
-//  main.cpp
-//  C++
-//
-//  Created by youjia li on 2020/2/20.
-//  Copyright © 2020 youjia li. All rights reserved.
-
-
-
 
 #include <iostream>
 #include <string>
