@@ -17,7 +17,7 @@ void clearArray(char *c)
 }
 
 //词法分析函数
-void analysis1(char* inChar,int *c,int *s)
+void analysis1(char* inChar,int *c,int *s,int count_c[],int *j1,int *count_case1)
 {
     
     //用于遍历inChar字符数组
@@ -40,6 +40,7 @@ void analysis1(char* inChar,int *c,int *s)
         else if(inChar[i]=='c' && inChar[i+1]=='a' && inChar[i+2]=='s' && inChar[i+3]=='e')
         {
             *c=*c+1;
+            *count_case1=*count_case1+1;
             i++;
             continue;
         }
@@ -64,6 +65,9 @@ void analysis1(char* inChar,int *c,int *s)
         else if(inChar[i]=='d' && inChar[i+1]=='e' && inChar[i+2]=='f' && inChar[i+3]=='a' && inChar[i+4]=='u'&& inChar[i+5]=='l' && inChar[i+6]=='t' )
         {
              *c=*c+1;
+             count_c[*j1]=*count_case1;
+             *j1=*j1+1;
+             *count_case1=0;
              i++;
              continue;
         }
@@ -234,9 +238,11 @@ int main()
 {
     char inChar[MAX_LEN] = {0};
     char address[200];
-    int type,i;
+    int type,i,j=0,k=0;
+    int count_case=0;
     int count=0;
     int count_s=0; //用于记录switch个数
+    int count_c[15]={0}; //用于存放每组switch case结构对应的case个数
     
     cin.get(address,200);
     cin>>type;
@@ -251,13 +257,19 @@ int main()
             }
             //对输入的字符串进行分析
             if(type==1){
-                analysis1(inChar,&count,&count_s);
+                analysis1(inChar,&count,&count_s,count_c,&j,&count_case);
             }
         }
          myfile.close();
     }
     printf("total num: %d\n",count);
     printf("switch num: %d\n",count_s);
+    cout<<"case num: ";
+    while(count_c[k]!='\0'){
+        cout<<count_c[k]<<" ";
+        k++;
+    }
+    cout<<endl;
    
     
     return 0;
