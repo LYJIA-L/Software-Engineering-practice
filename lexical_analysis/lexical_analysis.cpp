@@ -17,10 +17,8 @@ void clearArray(char *c)
 }
 
 //词法分析函数
-int analysis1(char* inChar,int c)
+void analysis1(char* inChar,int *c)
 {
-
-    int count=c;
     
     //用于遍历inChar字符数组
     int i = 0;
@@ -29,194 +27,194 @@ int analysis1(char* inChar,int c)
        
         if(inChar[i]=='a' && inChar[i+1]=='u' && inChar[i+2]=='t' && inChar[i+3]=='o')
         {
-            count++;
+            *c=*c+1;
             i++;
             continue;
         }
         else if(inChar[i]=='b' && inChar[i+1]=='r' && inChar[i+2]=='e' && inChar[i+3]=='a' && inChar[i+4]=='k')
         {
-            count++;
+            *c=*c+1;
             i++;
             continue;
         }
         else if(inChar[i]=='c' && inChar[i+1]=='a' && inChar[i+2]=='s' && inChar[i+3]=='e')
         {
-            count++;
+            *c=*c+1;
             i++;
             continue;
         }
         else if(inChar[i]=='c' && inChar[i+1]=='h' && inChar[i+2]=='a' && inChar[i+3]=='r')
         {
-             count++;
+             *c=*c+1;
              i++;
              continue;
         }
         else if(inChar[i]=='c' && inChar[i+1]=='o' && inChar[i+2]=='n' && inChar[i+3]=='s' && inChar[i+4]=='t')
         {
-             count++;
+             *c=*c+1;
              i++;
              continue;
         }
         else if(inChar[i]=='c' && inChar[i+1]=='o' && inChar[i+2]=='n' && inChar[i+3]=='t' && inChar[i+4]=='i'&& inChar[i+5]=='n' && inChar[i+6]=='u' && inChar[i+7]=='e')
         {
-             count++;
+             *c=*c+1;
              i++;
              continue;
         }
         else if(inChar[i]=='d' && inChar[i+1]=='e' && inChar[i+2]=='f' && inChar[i+3]=='a' && inChar[i+4]=='u'&& inChar[i+5]=='l' && inChar[i+6]=='t' )
         {
-             count++;
+             *c=*c+1;
              i++;
              continue;
         }
         else if(inChar[i]=='d' && inChar[i+1]=='o')
         {
-             count++;
+             *c=*c+1;
              i++;
              continue;
         }
         else if(inChar[i]=='d' && inChar[i+1]=='o' && inChar[i+2]=='u' && inChar[i+3]=='b' && inChar[i+4]=='l'&& inChar[i+5]=='e')
         {
-             count++;
+             *c=*c+1;
              i++;
              continue;
         }
         else if(inChar[i]=='e' && inChar[i+1]=='l' && inChar[i+2]=='s' && inChar[i+3]=='e')
         {
-              count++;
+              *c=*c+1;
               i++;
               continue;
         }
         else if(inChar[i]=='e' && inChar[i+1]=='n' && inChar[i+2]=='u' && inChar[i+3]=='m')
         {
-              count++;
+              *c=*c+1;
               i++;
               continue;
         }
         else if(inChar[i]=='e' && inChar[i+1]=='x' && inChar[i+2]=='t' && inChar[i+3]=='e' && inChar[i+4]=='r'&& inChar[i+5]=='n')
         {
-              count++;
+              *c=*c+1;
               i++;
               continue;
         }
         else if(inChar[i]=='f' && inChar[i+1]=='l' && inChar[i+2]=='o' && inChar[i+3]=='a' && inChar[i+4]=='t')
         {
-              count++;
+              *c=*c+1;
               i++;
               continue;
         }
         else if(inChar[i]=='f' && inChar[i+1]=='o' && inChar[i+2]=='r')
         {
-              count++;
+              *c=*c+1;
               i++;
               continue;
         }
         else if(inChar[i]=='g' && inChar[i+1]=='o' && inChar[i+2]=='t' && inChar[i+3]=='o')
         {
-              count++;
+              *c=*c+1;
               i++;
               continue;
         }
         else if(inChar[i]=='i' && inChar[i+1]=='f')
         {
-              count++;
+              *c=*c+1;
               i++;
               continue;
         }
         else if(inChar[i]=='i' && inChar[i+1]=='n' && inChar[i+2]=='t')
         {
-              count++;
+              *c=*c+1;
               i++;
               continue;
         }
         else if(inChar[i]=='l' && inChar[i+1]=='o' && inChar[i+2]=='n' && inChar[i+3]=='g')
         {
-              count++;
+              *c=*c+1;
               i++;
               continue;
         }
         else if(inChar[i]=='r' && inChar[i+1]=='e' && inChar[i+2]=='g' && inChar[i+3]=='i' && inChar[i+4]=='s'&& inChar[i+5]=='t' && inChar[i+6]=='e'&& inChar[i+7]=='r' )
         {
-              count++;
+              *c=*c+1;
               i++;
               continue;
         }
         else if(inChar[i]=='r' && inChar[i+1]=='e' && inChar[i+2]=='t' && inChar[i+3]=='u' && inChar[i+4]=='r'&& inChar[i+5]=='n')
         {
-              count++;
+              *c=*c+1;
               i++;
               continue;
         }
         else if(inChar[i]=='s' && inChar[i+1]=='h' && inChar[i+2]=='o' && inChar[i+3]=='r' && inChar[i+4]=='t')
         {
-              count++;
+              *c=*c+1;
               i++;
               continue;
         }
         else if(inChar[i]=='s' && inChar[i+1]=='i' && inChar[i+2]=='g' && inChar[i+3]=='n' && inChar[i+4]=='e'&& inChar[i+5]=='d')
         {
-              count++;
+              *c=*c+1;
               i++;
               continue;
         }
         else if(inChar[i]=='s' && inChar[i+1]=='i' && inChar[i+2]=='z' && inChar[i+3]=='e' && inChar[i+4]=='o'&& inChar[i+5]=='f')
         {
-              count++;
+              *c=*c+1;
               i++;
               continue;
         }
         else if(inChar[i]=='s' && inChar[i+1]=='t' && inChar[i+2]=='a' && inChar[i+3]=='t' && inChar[i+4]=='i'&& inChar[i+5]=='c')
         {
-              count++;
+              *c=*c+1;
               i++;
               continue;
         }
         else if(inChar[i]=='s' && inChar[i+1]=='t' && inChar[i+2]=='r' && inChar[i+3]=='u' && inChar[i+4]=='c'&& inChar[i+5]=='t')
         {
-             count++;
+             *c=*c+1;
              i++;
              continue;
         }
         else if(inChar[i]=='s' && inChar[i+1]=='w' && inChar[i+2]=='i' && inChar[i+3]=='t' && inChar[i+4]=='c'&& inChar[i+5]=='h')
         {
-             count++;
+             *c=*c+1;
              i++;
              continue;
         }
         else if(inChar[i]=='t' && inChar[i+1]=='y' && inChar[i+2]=='p' && inChar[i+3]=='e' && inChar[i+4]=='d'&& inChar[i+5]=='e' && inChar[i+6]=='f' )
         {
-             count++;
+             *c=*c+1;
              i++;
              continue;
         }
         else if(inChar[i]=='u' && inChar[i+1]=='n' && inChar[i+2]=='i' && inChar[i+3]=='o' && inChar[i+4]=='n')
         {
-             count++;
+             *c=*c+1;
              i++;
              continue;
         }
         else if(inChar[i]=='u' && inChar[i+1]=='n' && inChar[i+2]=='s' && inChar[i+3]=='i' && inChar[i+4]=='g'&& inChar[i+5]=='n' && inChar[i+6]=='e'&& inChar[i+7]=='d' )
         {
-             count++;
+             *c=*c+1;
              i++;
              continue;
         }
         else if(inChar[i]=='v' && inChar[i+1]=='o' && inChar[i+2]=='i' && inChar[i+3]=='d')
         {
-             count++;
+             *c=*c+1;
              i++;
              continue;
         }
         else if(inChar[i]=='v' && inChar[i+1]=='o' && inChar[i+2]=='l' && inChar[i+3]=='a' && inChar[i+4]=='t'&& inChar[i+5]=='i' && inChar[i+6]=='l'&& inChar[i+7]=='e' )
         {
-             count++;
+             *c=*c+1;
              i++;
              continue;
         }
                            
         else if(inChar[i]=='w' && inChar[i+1]=='h' && inChar[i+2]=='i' && inChar[i+3]=='l' && inChar[i+4]=='e')
         {
-             count++;
+             *c=*c+1;
              i++;
              continue;
         }
@@ -251,7 +249,7 @@ int main()
             }
             //对输入的字符串进行分析
             if(type==1){
-                count=analysis1(inChar,count);
+                analysis1(inChar,&count);
             }
         }
          myfile.close();
