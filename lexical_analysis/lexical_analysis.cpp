@@ -17,7 +17,7 @@ void clearArray(char *c)
 }
 
 //词法分析函数
-void analysis1(char* inChar,int *c)
+void analysis1(char* inChar,int *c,int *s)
 {
     
     //用于遍历inChar字符数组
@@ -178,6 +178,7 @@ void analysis1(char* inChar,int *c)
         else if(inChar[i]=='s' && inChar[i+1]=='w' && inChar[i+2]=='i' && inChar[i+3]=='t' && inChar[i+4]=='c'&& inChar[i+5]=='h')
         {
              *c=*c+1;
+             *s=*s+1;
              i++;
              continue;
         }
@@ -235,6 +236,7 @@ int main()
     char address[200];
     int type,i;
     int count=0;
+    int count_s=0; //用于记录switch个数
     
     cin.get(address,200);
     cin>>type;
@@ -249,13 +251,13 @@ int main()
             }
             //对输入的字符串进行分析
             if(type==1){
-                analysis1(inChar,&count);
+                analysis1(inChar,&count,&count_s);
             }
         }
          myfile.close();
     }
     printf("total num: %d\n",count);
-    
+    printf("switch num: %d\n",count_s);
    
     
     return 0;
