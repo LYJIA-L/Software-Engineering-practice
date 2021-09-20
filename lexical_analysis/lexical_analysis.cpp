@@ -249,8 +249,8 @@ int main()
     if(myfile.is_open()){
         string line;
         while(getline(myfile,line)){
-            for(i=0;i<200;i++){
-                inChar[i]=line[i];
+            for(i = 0;i < 200;i++){
+                inChar[i] = line[i];
             }
             //对输入的字符串进行分析
           analysis(inChar,&count,&count_s,count_c,&j,&count_case,&l,&count_if_else,&count_if_elseif_else,if_else1);
@@ -258,21 +258,21 @@ int main()
          myfile.close();
     }
     printf("total num: %d\n",count);
-    if(type!=1){
-        printf("switch num: %d\n",count_s);
-        cout<<"case num: ";
-        while(count_c[k]!='\0'){
-            cout<<count_c[k]<<" ";
+    if(type != 1){
+        printf ("switch num: %d\n",count_s);
+        cout << "case num: ";
+        while(count_c[k] != '\0'){
+            cout << count_c[k] << " ";
             k++;
         }
-        cout<<endl;
+        cout << endl;
     }
-    if(type==3){
-           cout<<"if-else num: "<<count_if_else<<endl;
+    if(type == 3){
+           cout << "if-else num: " << count_if_else << endl;
        }
-       if(type==4){
-           cout<<"if-else num: "<<count_if_else<<endl;
-           cout<<"if-elseif-else num: "<<count_if_elseif_else<<endl;
+       if(type == 4){
+           cout << "if-else num: " << count_if_else << endl;
+           cout << "if-elseif-else num: " << count_if_elseif_else << endl;
        }
    
     
